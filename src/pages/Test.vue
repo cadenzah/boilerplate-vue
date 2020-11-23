@@ -1,7 +1,8 @@
 <template>
   <div>
-    <p>Test 페이지</p>
-    <button @click="navigatePrev">뒤로가기!</button>
+    <h2>Test Page</h2>
+    <p>You can go back to previous page /w Vue Router.</p>
+    <button @click="navigatePrev">Back</button>
   </div>
 </template>
 

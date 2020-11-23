@@ -2,52 +2,21 @@
   <div id="app">
     <navigation></navigation>
     <hr />
-    Parent counter: {{parentCounter}} <br />
-    <button
-      @click="addCounter"
-    >
-      +
-    </button>
-    <button
-      @click="subCounter"
-    >
-      -
-    </button>
-    <card></card>
-    <router-view></router-view>
-    <p>이 위에는 라우팅 별 페이지가 나와야 합니다</p>
+    <h2>Vue.js Boilerplate</h2>
+    <p>This is a sample page written based on this boilerplate project. You can try this out. Just clone it and make your own project! </p>
+    <router-view class="router-page"></router-view>
+    <p class="routing-below-indicator">Routed pages will be shown above. How can you recognize it? Well, you will see... blue...</p>
   </div>
 </template>
 
 <script>
 import {
-  Card,
   Navigation,
 } from './components';
 
 export default {
   components: {
-    card: Card,
     navigation: Navigation,
-  },
-  // data() {
-  //   return {
-  //     counter: 0,
-  //   };
-  // },
-  computed: {
-    parentCounter: function() {
-      return this.$store.getters.getCounter;
-    },
-  },
-  methods: {
-    addCounter() {
-      // this.$store.mutations.addCounter(); // Invalid
-      this.$store.commit('addCounter'); 
-    },
-    subCounter() {
-      this.$store.state.counter--; // okay, but not preferred
-    },
   },
   created: function() {
     console.log(this)
@@ -59,6 +28,15 @@ export default {
 #app {
   font-size: 18px;
   font-family: 'Roboto', sanf-serif;
-  color: blue;
+  color: #3a3a3a;
+}
+
+.routing-below-indicator {
+  color: coral;
+  text-decoration: underline;
+}
+.router-page {
+  background-color: cornflowerblue;
+  margin: 1rem;
 }
 </style>

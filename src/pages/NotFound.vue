@@ -1,5 +1,5 @@
 <template>
-  <p>저런, 존재하지 않는 페이지입니다!</p>
+  <p class="oops">Oops, you've got to wrong way,</p>
 </template>
 
 <script>

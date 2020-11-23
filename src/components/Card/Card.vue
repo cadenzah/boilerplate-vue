@@ -1,18 +1,19 @@
 <template>
-  <div>
-    <hr />
-    Child counter: {{getCounter}} <br />
+  <div class="card">
+    <h3>Card.vue</h3>
+    <p>&lt;Card&gt; component receives a `message` props which can be used inside. BTW... where is the message?</p>
+    <p>Child counter: {{getCounter}}</p>
     <button @click="addCounter">+</button>
     <button @click="subCounter">-</button>
 
     <!-- Custom directive practice-->
-    <p v-conditional:[getCounter]="10">10이 되면 카운터가 보입니다</p>
-    <p v-conditional:[getCounter]="20">20이 되면 보이는 카운터입니다.</p>
+    <p class="message" v-conditional:[getCounter]="10">You can check this counter if it's 10</p>
+    <p v-conditional:[getCounter]="20">You can check this counter if it's 20</p>
 
-    <hr />
-    <p v-if="_dialog">이 메시지가 보일까?</p>
-    <button @click="showMessage">보여줘</button>
-    <button @click="hideMessage">가려줘</button>
+    <p class="message" v-if="_dialog">{{ message }}</p>
+    <button @click="showMessage">Show</button>
+    <button @click="hideMessage">Hide</button>
+    <p>You can check directive and mixin feature in &lt;Card&gt; component.</p>
   </div>
 </template>
 
@@ -24,7 +25,7 @@ export default {
   mixins: [
     dialogMixin,
   ],
-  props: ['num'],
+  props: ['message'],
   computed: {
     _dialog: function() {
       return this.dialog
@@ -49,5 +50,14 @@ export default {
 </script>
 
 <style>
+.card {
+  background-color: thistle;
+  border: 2px solid 5a5a5a;
+  margin: 1rem;
+}
+
+.message {
+  background-color: violet
+}
 
 </style>
