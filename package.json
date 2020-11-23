@@ -4,7 +4,9 @@
   "description": "Vue.js boilerplate",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack --config ./config/webpack.config.js --progress",
+    "test:watch": "npx jest --watchAll --verbose",
+    "dev": "npx webpack serve --config ./config/webpack.config.dev.js --progress --open chrome"
   },
   "repository": {
     "type": "git",
