@@ -29,7 +29,7 @@
   |- mixins/      : Re-usable Vue logics
   |- pages/       : Page codes which composes a single view
   |- router/      : Vue Router logics
-  |- store        : Vuex store logics
+  |- store/       : Vuex store logics
   |- index.html   : Base HTML file
   |- main.js      : Vue entry code
   |- App.vue      : Root Vue component
@@ -58,6 +58,7 @@ TBD
 
 ### How to run test
 1. Run `npm run test:watch`
+2. If you need code coverage report, run `npm run test:coverage`
 
 <a name="update-logs"></a>
 ## Update Logs
