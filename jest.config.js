@@ -18,6 +18,9 @@ module.exports = {
     '<rootDir>/build',
     '<rootDir>/dist',
   ],
+  moduleNameMapper: {
+    "@(.*)$": "<rootDir>/src/$1",
+  },
   // testMatch: [
   //   // directories to locate test suite files
   //   '<rootDir>/src/**/*.test.[jt]s?(s)',
