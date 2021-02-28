@@ -25,6 +25,11 @@
     "url": "https://github.com/cadenzah/boilerplate-vue/issues"
   },
   "homepage": "https://github.com/cadenzah/boilerplate-vue#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
