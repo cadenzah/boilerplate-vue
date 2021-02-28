@@ -49,7 +49,7 @@ The `.env` file should be located in `/config/env` directory.
 
 The project will inject `{ __NOT_USED__: undefined }` environment variable as `process.env` object if you don't generate `.env` file, which means `.env` file is not a mandatory part of your project.
 
-> **CAUTION:** You can access your predefined `.env`'s values **only by accessing `process.env`, only in build-time**. `process.env` is not available in run-time, and its properties cannot be accessed directly in run-time either.
+> **CAUTION:** You can access your predefined `.env`'s values **only by accessing `process.env`, only in build-time**. `process.env` is not available in run-time.
 
 <a name="how-to-use"></a>
 ## How to use
