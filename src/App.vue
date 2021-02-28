@@ -12,7 +12,7 @@
 <script>
 import {
   Navigation,
-} from './components';
+} from '@/components';
 
 export default {
   components: {

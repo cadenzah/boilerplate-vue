@@ -2,7 +2,7 @@ import {
   Root,
   Test,
   NotFound,
-} from '../pages';
+} from '@/pages';
 
 const routes = [
   {

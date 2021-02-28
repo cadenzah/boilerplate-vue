@@ -1,6 +1,6 @@
-import Root from './Root.vue';
-import Test from './Test.vue';
-import NotFound from './NotFound.vue';
+import Root from '@/pages/Root.vue';
+import Test from '@/pages/Test.vue';
+import NotFound from '@/pages/NotFound.vue';
 
 export {
   Root,

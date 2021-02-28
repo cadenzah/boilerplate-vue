@@ -9,8 +9,9 @@ module.exports = (env) => {
   const envKeys = require('./env')(env)
 
   // file paths
-  const configPath = path.join(__dirname);
-  const buildPath = path.join(configPath, '..', 'build');
+  const configPath = path.resolve(__dirname);
+  const buildPath = path.resolve(configPath, '..', 'build');
+  const srcPath = path.resolve(__dirname, '..', 'src')
 
   const config = {
     entry: [
@@ -24,6 +25,11 @@ module.exports = (env) => {
       path: buildPath,
     },
     mode: 'development',
+    resolve: {
+      alias: {
+        '@': srcPath,
+      },
+    },
     module: {
       rules: [
         {

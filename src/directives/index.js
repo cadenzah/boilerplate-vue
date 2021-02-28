@@ -1,4 +1,4 @@
-import conditional from './conditional';
+import conditional from '@/directives/conditional';
 
 export {
   conditional,
