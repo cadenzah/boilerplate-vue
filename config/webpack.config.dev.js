@@ -1,9 +1,13 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoader = require('vue-loader');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = (env) => {
+  // load environment variables to use
+  const envKeys = require('./env')(env)
+
   // file paths
   const configPath = path.join(__dirname);
   const buildPath = path.join(configPath, '..', 'build');
@@ -70,6 +74,7 @@ module.exports = (env) => {
         template: './src/index.html',
       }),
       new VueLoaderPlugin(),
+      new webpack.DefinePlugin(envKeys.stringified),
     ],
   };
 

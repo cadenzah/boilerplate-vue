@@ -16,7 +16,7 @@ export default {
   },
   data: function() {
     return {
-      message: '',
+      message: `${process.env.__NOT_USED__}`,
     }
   },
   methods: {
