@@ -7,7 +7,8 @@
     "build": "npx webpack --config ./config/webpack.config.js --progress",
     "test:watch": "npx jest --watchAll --verbose",
     "test:coverage": "npx jest --watchAll --verbose --coverage",
-    "dev": "npx webpack serve --config ./config/webpack.config.dev.js --progress --open chrome"
+    "dev": "npx webpack serve --config ./config/webpack.config.dev.js --progress --open chrome",
+    "sb": "npx start-storybook -p 6006"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,11 @@
     "vuejs",
     "vue",
     "javascript",
-    "webpack"
+    "webpack",
+    "storybook",
+    "tdd",
+    "jest",
+    "vue-test-utils"
   ],
   "author": "cadenzah <cadenzah93@gmail.com> (https://github.com/cadenzah)",
   "license": "ISC",
@@ -33,6 +38,9 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-viewport": "^6.1.20",
+    "@storybook/vue": "^6.1.20",
     "@vue/test-utils": "^1.1.1",
     "@webpack-cli/serve": "^1.1.0",
     "babel-core": "^7.0.0-bridge.0",
